@@ -1,0 +1,3 @@
+[submodule "opscodecookbooks"]
+	path = opscodecookbooks
+	url = git://github.com/opscode/cookbooks.git
