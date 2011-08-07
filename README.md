@@ -6,7 +6,7 @@ NOTE: To install vagrant on Mac OSX, you need to have rubydev installed.  To ins
 Use this to get a working shopify (php for now) setup.
 
 *   access the shopify app at localhost:8080
-*   _if you map shopify.dev.imetrical.com to 192.168.43.42, (/etc/hosts)_
+*   _if you map shopify.dev.imetrical.com to 192.168.42.42, (/etc/hosts)_
     *   access the shopify app at http://shopify.dev.imetrical.com:80
     *   access the shopify app at https://shopify.dev.imetrical.com:443
     
@@ -35,10 +35,25 @@ Don't forget to fetch the submodules
     git clone git@github.com:daneroo/vagrant-shopify.git
     git submodule update --init --recursive 
 
-## Pierre-Luc was here
+## Managing the the opscoode cookbooks
+This is how we added the cookbooks originally
 
-    After you checkout, you should run this line if you want this to work
-    rm -rf opscodecookbooks/zenoss/
+    git submodule add git://github.com/opscode/cookbooks.git opscodecookbooks
+    git commit -am "Import Opscode cookbooks"
+
+This is how we update them
+
+    ...
+## Chef gem version
+To bring chef to 0.10.x,
+
+    sudo gem update chef
+
+Need to play with Virtualbox 4.1.x, vagrant 0.8, and get a new basbox.
+For now, firewall recipe is brpken for me so:...
+
+    rm -rf opscodecookbooks/firewall
     
-    Probably, updating submodule references will fix it.   
-    
+## Nice favicon sets
+
+    http://www.freefavicon.com/freefavicons/objects/alpha.php?alpha=p    

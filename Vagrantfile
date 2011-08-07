@@ -1,19 +1,11 @@
-windows = RUBY_PLATFORM.downcase.include?("mswin")
-if RUBY_PLATFORM.downcase.include?("java")
-	include Java
-	windows = java.lang.System.get_property("os.name").downcase.include?("windows")
-end
 
 Vagrant::Config.run do |config|
   config.vm.box = "lucid32"
 
-  # The url from where the 'config.vm.box' box will be fetched if ...
+  # The url from where the 'config.vm.box' box will be fetched if needed
   config.vm.box_url = "http://files.vagrantup.com/lucid32.box"
 
-  # config.vm.boot_mode = :gui
-  # config.vm.network "33.33.33.10"
-  
-	config.vm.network "192.168.42.42"
+  config.vm.network "192.168.42.42"
   
   config.vm.forward_port "shopify-http", 80, 8080
   config.vm.forward_port "shopify-https", 443, 8443
