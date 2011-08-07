@@ -56,4 +56,11 @@ For now, firewall recipe is brpken for me so:...
     
 ## Nice favicon sets
 
-    http://www.freefavicon.com/freefavicons/objects/alpha.php?alpha=p    
+    http://www.freefavicon.com/freefavicons/objects/alpha.php?alpha=p
+
+## Private app access: 
+
+    curl https://xxxxxxx:yyyyyyyy@feest-bernier9052.myshopify.com/admin/orders.json | python -mjson.tool
+
+
+    

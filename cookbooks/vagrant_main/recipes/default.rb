@@ -26,7 +26,7 @@ apt_repository "mongo10gen" do
 end
 
 # install mongo pkg
-%w{ mongodb-10gen php5-mysql php5-gd }.each do |a_package|
+%w{ mongodb-10gen php5-mysql php5-gd php5-curl }.each do |a_package|
   package a_package
 end
 
